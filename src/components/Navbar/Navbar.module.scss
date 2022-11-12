@@ -1,0 +1,19 @@
+.img{
+    width: 200px;
+}
+.imgB{
+    width: 100px;
+}
+
+@media (max-width: 768px) {
+    .img{
+        width: 100px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .imgB{
+        width: 70px;
+    }
+  }

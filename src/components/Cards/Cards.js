@@ -59,7 +59,7 @@ const Cards = ({ results, page }) => {
       );
     });
   } else {
-    display = "No Characteres Found :/";
+    display = "Personaje no encontrado :/";
   }
 
   return <>{display}</>;

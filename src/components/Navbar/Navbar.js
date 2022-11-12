@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import styles from "./Navbar.module.scss";
 import "../../App.css";
 
 const Navbar = () => {
@@ -7,43 +8,51 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
       <div className="container">
         <Link to="/" className="fs-3 ubuntu navbar-brand">
-          Rick &amp; Morty
+          <img className={styles.img} src="Rick_and_Morty.svg" />
         </Link>
-
+        <Link to="/" className="fs-3 ubuntu navbar-brand">
+          <img
+            className={styles.imgB}
+            src="Bouslogo-color.svg"
+            alt="LogoBous"
+          />
+        </Link>
+        <style jsx>{`
+          button[aria-expanded="false"] > .close {
+            display: none;
+          }
+          button[aria-expanded="true"] > .open {
+            display: none;
+          }
+        `}</style>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler border-0"
           type="button"
-          data-toggle="collapse"
+          data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <style jsx>
-            {`
-              button[aria-expanded="false"] > .close {
-                display: none;
-              }
-              button[aria-expanded="true"] > .open {
-                display: none;
-              }
-            `}
-          </style>
-          <i className="fas fa fa-bars open fw-bold text-dark"></i>
-          <i className="fas fa-times close fw-bold text-dark"></i>
+          <span class="fas fa-bars open text-dark"></span>
+          <span class="fas fa-times close text-dark"></span>
         </button>
         <div
           className="collapse navbar-collapse justify-content-end"
           id="navbarNavAltMarkup"
         >
           <div className="navbar-nav fs-5">
-            <NavLink activeClassName="active" to="/" className=" nav-link">
+            <NavLink to="/" className="nav-link">
               Personajes
             </NavLink>
-            <NavLink to="/episodes" className=" nav-link">
-              Episodios
+            <NavLink to="/episodes" className="nav-link">
+            Episodios
             </NavLink>
-            <NavLink to="/location" className=" nav-link">
+            <NavLink
+              activeClassName="active"
+              className="nav-link"
+              to="/location"
+            >
               Localización
             </NavLink>
           </div>
