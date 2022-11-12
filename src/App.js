@@ -6,6 +6,7 @@ import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Pagination from "./components/Pagination/Pagination";
 import Search from "./components/Search/Search";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
@@ -27,10 +28,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="d-flex justify-content-center gap-5 align-items-center">
-        <h1 className="text-start ubuntu my-4 ">Rick &amp; Morty </h1>
-        <img src="Bouslogo-color.svg" alt="LogoBous"></img>
-      </div>
+      <Navbar/>
+     
       <Search setPageNumber={setPageNumber} setSearch={setSearch} />
       <div className="container">
         <div className="row">
