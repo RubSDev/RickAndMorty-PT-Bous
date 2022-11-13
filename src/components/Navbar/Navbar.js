@@ -5,8 +5,8 @@ import "../../App.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg navbar-light  mb-4">
+      <div className="container navContent">
         <Link to="/" className="fs-3 ubuntu navbar-brand">
           <img className={styles.img} src="Rick_and_Morty.svg" />
         </Link>

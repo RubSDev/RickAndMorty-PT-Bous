@@ -2,13 +2,17 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f8ff !important;
+}
+nav {
+  background-color: #c6def3 !important;
 }
 
-.ubuntu{
-  font-family:'Ubuntu';
+.ubuntu {
+  font-family: "Ubuntu";
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

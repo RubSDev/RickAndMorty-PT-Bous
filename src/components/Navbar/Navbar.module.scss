@@ -1,19 +1,21 @@
-.img{
-    width: 200px;
+nav {
+  background-color: #c6def3 !important;
 }
-.imgB{
-    width: 100px;
+.img {
+  width: 200px;
+}
+.imgB {
+  width: 100px;
 }
 
 @media (max-width: 768px) {
-    .img{
-        width: 100px;
-    }
+  .img {
+    width: 100px;
   }
+}
 
-
-  @media (max-width: 768px) {
-    .imgB{
-        width: 70px;
-    }
+@media (max-width: 768px) {
+  .imgB {
+    width: 70px;
   }
+}
