@@ -11,7 +11,7 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
   useEffect(() => {
     window.addEventListener("resize", updateDimension);
     return () => window.removeEventListener("resize", updateDimension);
-  }, []);
+  }, [updateDimension]);
 
   return (
     <>

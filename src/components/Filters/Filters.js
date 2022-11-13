@@ -3,8 +3,9 @@ import Gender from "../Filters/Category/Gender";
 import Species from "../Filters/Category/Species";
 import Status from "../Filters/Category/Status";
 import Favorites from "../Filters/Category/Favorites";
+import Searches from "./Category/Searchs";
 
-const Filters = ({setGender, setStatus, setPageNumber, setSpecies}) => {
+const Filters = ({setGender, setStatus, setPageNumber, setSpecies, sendSearch}) => {
 
 
   let clear = ()=>{
@@ -31,6 +32,7 @@ const Filters = ({setGender, setStatus, setPageNumber, setSpecies}) => {
        <Species setPageNumber={setPageNumber} setSpecies={setSpecies}/>
        <Gender setPageNumber={setPageNumber} setGender={setGender}/>
        <Favorites/>
+       <Searches sendSearchTwo={sendSearch}/>
       </div>
 
 

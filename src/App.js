@@ -23,7 +23,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<CardDetails />} />
 
-
         <Route path="/episodes" element={<Episodes />} />
         <Route path="/episodes/:id" element={<CardDetails />} />
         <Route path="/location" element={<Location />} />
@@ -40,6 +39,8 @@ const Home = () => {
   let [gender, setGender] = useState("");
   let [species, setSpecies] = useState("");
   let [fetchedData, updateFetchedData] = useState([]);
+  let [saveSearch, setSaveSearch] = useState();
+
   let { info, results } = fetchedData;
 
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
@@ -54,7 +55,11 @@ const Home = () => {
   return (
     <div className="App">
       <h1 className="text-center mb-4">Personajes</h1>
-      <Search setPageNumber={setPageNumber} setSearch={setSearch} />
+      <Search
+        setPageNumber={setPageNumber}
+        setSearch={setSearch}
+        getSearch={setSaveSearch}
+      />
       <div className="container">
         <div className="row">
           <Filters
@@ -62,6 +67,7 @@ const Home = () => {
             setPageNumber={setPageNumber}
             setGender={setGender}
             setSpecies={setSpecies}
+            sendSearch={saveSearch}
           />
 
           <div className="col-lg-8 col-12">
