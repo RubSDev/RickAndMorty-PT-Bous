@@ -2,6 +2,7 @@ import React from "react";
 import Gender from "../Filters/Category/Gender";
 import Species from "../Filters/Category/Species";
 import Status from "../Filters/Category/Status";
+import Favorites from "../Filters/Category/Favorites";
 
 const Filters = ({setGender, setStatus, setPageNumber, setSpecies}) => {
 
@@ -29,6 +30,7 @@ const Filters = ({setGender, setStatus, setPageNumber, setSpecies}) => {
        <Status setPageNumber={setPageNumber} setStatus={setStatus}/>       
        <Species setPageNumber={setPageNumber} setSpecies={setSpecies}/>
        <Gender setPageNumber={setPageNumber} setGender={setGender}/>
+       <Favorites/>
       </div>
 
 
