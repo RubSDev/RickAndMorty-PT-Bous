@@ -3,7 +3,7 @@ import Gender from "../Filters/Category/Gender";
 import Species from "../Filters/Category/Species";
 import Status from "../Filters/Category/Status";
 import Favorites from "../Filters/Category/Favorites";
-import Searches from "./Category/Searchs";
+import Searches from "./Category/Searches";
 
 const Filters = ({setGender, setStatus, setPageNumber, setSpecies, sendSearch}) => {
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Category.module.scss";
 
 const Searches = ({ sendSearchTwo }) => {
   let [arrSearch, setArrSearch] = useState([]);
@@ -9,6 +10,13 @@ const Searches = ({ sendSearchTwo }) => {
       setArrSearch(JSON.parse(localStorage.getItem("searches")));
     }
   }, [sendSearchTwo]);
+
+  const deleteSearch = (index) => {
+    let search = JSON.parse(localStorage.getItem("searches"));
+    search.splice(index, 1);
+    localStorage.setItem("searches", JSON.stringify(search));
+    setArrSearch(search)
+  };
 
   return (
     <div className="accordion-item">
@@ -34,7 +42,10 @@ const Searches = ({ sendSearchTwo }) => {
           arrSearch.map((item, index) => (
             <div key={index} className="accordion-body d-flex flex-wrap gap-3">
               <p>{item}</p>
-              <button className="btn btn-outline-primary">
+              <button
+                onClick={() => deleteSearch(index)}
+                className="btn btn-outline-primary"
+              >
                 <p>X</p>
               </button>
             </div>

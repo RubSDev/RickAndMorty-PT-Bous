@@ -4,17 +4,13 @@ import styles from "./Navbar.module.scss";
 import "../../App.css";
 
 const Navbar = () => {
-  let clear = () => {
-    window.location.reload(false);
-  };
-
   return (
     <nav className="navbar navbar-expand-lg navbar-light  mb-4">
       <div className="container navContent">
-        <Link onClick={clear} to="/" className="fs-3 ubuntu navbar-brand">
+        <Link to="/" className="fs-3 ubuntu navbar-brand">
           <img className={styles.img} src="Rick_and_Morty.svg" />
         </Link>
-        <Link onClick={clear} to="/" className="fs-3 ubuntu navbar-brand">
+        <Link to="/" className="fs-3 ubuntu navbar-brand">
           <img
             className={styles.imgB}
             src="Bouslogo-color.svg"
