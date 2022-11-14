@@ -35,9 +35,7 @@ const Filters = ({
         <Status setPageNumber={setPageNumber} setStatus={setStatus} />
         <Species setPageNumber={setPageNumber} setSpecies={setSpecies} />
         <Gender setPageNumber={setPageNumber} setGender={setGender} />
-
         {/*<Favorites/>*/}
-
         <Searches sendSearchTwo={sendSearch} />
       </div>
     </div>
