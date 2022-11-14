@@ -14,7 +14,7 @@ const Search = ({ setSearch, setPageNumber, getSearch = () => null }) => {
     arrSearchLocalS.push(search);
     localStorage.setItem("searches", JSON.stringify(arrSearchLocalS));
   };
-  console.log("Funcion", saveSearch);
+
 
   return (
     <form className=" d-flex flex-sm-row flex-column align-items-center justify-content-center gap-4 mb-5">
@@ -47,7 +47,7 @@ const Search = ({ setSearch, setPageNumber, getSearch = () => null }) => {
           setSaveSearch("");
           e.target.reset();
         }}
-        className={` ${styles.btn} btn btn-primary fs-5`}
+        className={` ${styles.btn} btn btn-outline-primary fs-5`}
       >
         Limpiar
       </button>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Category.module.scss";
+import styles from "./Category.module.scss";
 
 const Searches = ({ sendSearchTwo }) => {
   let [arrSearch, setArrSearch] = useState([]);
@@ -41,10 +41,10 @@ const Searches = ({ sendSearchTwo }) => {
         {arrSearch &&
           arrSearch.map((item, index) => (
             <div key={index} className="accordion-body d-flex flex-wrap gap-3">
-              <p>{item}</p>
+              <p className="btnDeleteSearch">{item}</p>
               <button
                 onClick={() => deleteSearch(index)}
-                className="btn btn-outline-primary"
+                className={styles.btnDeleteSearch}
               >
                 <p>X</p>
               </button>

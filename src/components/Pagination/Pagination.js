@@ -3,7 +3,7 @@ import ReactPaginate from "react-paginate";
 
 const Pagination = ({ info, pageNumber, setPageNumber }) => {
   let [width, setWidth] = useState(window.innerWidth);
-  console.log(width);
+
   let updateDimension = () => {
     setWidth(window.innerWidth);
   };
