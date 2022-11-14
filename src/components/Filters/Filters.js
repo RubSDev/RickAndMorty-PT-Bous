@@ -2,7 +2,7 @@ import React from "react";
 import Gender from "../Filters/Category/Gender";
 import Species from "../Filters/Category/Species";
 import Status from "../Filters/Category/Status";
-import Favorites from "../Filters/Category/Favorites";
+//import Favorites from "../Filters/Category/Favorites";
 import Searches from "./Category/Searches";
 
 const Filters = ({setGender, setStatus, setPageNumber, setSpecies, sendSearch}) => {
@@ -31,7 +31,7 @@ const Filters = ({setGender, setStatus, setPageNumber, setSpecies, sendSearch}) 
        <Status setPageNumber={setPageNumber} setStatus={setStatus}/>       
        <Species setPageNumber={setPageNumber} setSpecies={setSpecies}/>
        <Gender setPageNumber={setPageNumber} setGender={setGender}/>
-       <Favorites/>
+       {/*<Favorites/>*/}
        <Searches sendSearchTwo={sendSearch}/>
       </div>
 
